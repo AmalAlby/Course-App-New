@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center text-primary">
+                   <h1>SEARCH COURSE</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center text-secondary">
+                    <form action="" class="form-label"><h4> COURSE TITLE</h4></form>
+                    <input name="courseTitle" [(ngModel)]="courseTitle" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <button (click)="read()"  class="btn btn-primary"><h4>Submit</h4></button>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-4" *ngFor="let i of searchdata">
+                
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Description</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Venue</th>
+                            <th scope="col">Duration</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">{{i.courseDesc}}</th>
+                            <td>{{i.date}}</td>
+                            <td>{{i.venue}}</td>
+                            <td>{{i.duration}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
